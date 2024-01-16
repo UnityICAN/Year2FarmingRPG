@@ -5,6 +5,7 @@ public class PlayerController : MonoBehaviour {
     [SerializeField] private float speed = 1f;
     [SerializeField] private Transform playerTransform;
     [SerializeField] private Animator animator;
+    [SerializeField] private SeedItem seed;
 
     private List<Item> items;
     private int selectionIndex;
@@ -33,8 +34,7 @@ public class PlayerController : MonoBehaviour {
                 playerTransform.position,
                 Vector2.zero);
             Debug.Log(raycastHit2D.collider);
-            // Ici on peut récupérer le GameObject touché et donc récupérer le PlantationController dessus
-            // Et donc appeler une méthode PlantSeed sur le PlantationController
+            raycastHit2D.collider.gameObject.GetComponent<PlantationController>().PlantSeed(seed);
         }
     }
 

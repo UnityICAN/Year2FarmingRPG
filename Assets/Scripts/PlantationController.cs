@@ -1,18 +1,13 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class PlantationController : MonoBehaviour
-{
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+public class PlantationController : MonoBehaviour {
+    [SerializeField] private SpriteRenderer spriteRenderer;
+    private SeedItem plantedSeed;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    public void PlantSeed(SeedItem plantedSeed) {
+        if (this.plantedSeed != null) {
+            this.plantedSeed = plantedSeed;
+            spriteRenderer.sprite = this.plantedSeed.FloorSprite;
+        }
     }
 }

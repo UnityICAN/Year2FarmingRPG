@@ -358,6 +358,7 @@ MonoBehaviour:
   speed: 5
   playerTransform: {fileID: 2077830774}
   animator: {fileID: 2077830775}
+  seed: {fileID: 11400000, guid: 23d1ecf5a4c3df344be0922828db5188, type: 2}
 --- !u!1001 &8599135904568372576
 PrefabInstance:
   m_ObjectHideFlags: 0
