@@ -33,8 +33,8 @@ public class PlayerController : MonoBehaviour {
             RaycastHit2D raycastHit2D = Physics2D.Raycast(
                 playerTransform.position,
                 Vector2.zero);
-            Debug.Log(raycastHit2D.collider);
-            raycastHit2D.collider.gameObject.GetComponent<PlantationController>().PlantSeed(seed);
+            if (raycastHit2D.collider != null)
+                raycastHit2D.collider.gameObject.GetComponent<PlantationController>().PlantSeed(seed);
         }
     }
 
